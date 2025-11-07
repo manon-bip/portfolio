@@ -381,7 +381,7 @@ svg {
 /* Index */
 
 #marquee {
-  width: calc(100% - (2 * 0.75rem));
+  width: calc(100vw - (2 * 0.75rem));
 
   display: flex;
   overflow: hidden;
@@ -488,4 +488,5 @@ svg {
   -webkit-backface-visibility: hidden;
 
   line-height: 0.75rem;
+
 }
