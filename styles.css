@@ -44,7 +44,7 @@
 	--couleur-fond: blue;
 	--couleur-main: #C5CEFF;
 
-  --couleur-fond-bis: #C5CEFF;
+  --couleur-fond-bis: #E1E6FF;
   --couleur-main-bis: blue;
   
 	--typo-titre: "Alegreya";
@@ -219,7 +219,26 @@ svg {
   fill: white;
 }
 
-.filter {
+.after-space {
+  margin-bottom: 0.75rem;
+}
+
+.italic-text {
+  font-style: italic;
+  font-weight: light;
+}
+
+.bold-text {
+  font-family: var(--typo-courant);
+  font-weight: bold;
+}
+
+.wingdings {
+  font-family: var(--typo-signe);
+}
+
+.wingdings2 {
+  font-family: var(--typo-signe-bis);
 }
 
 .filter img {
@@ -255,19 +274,6 @@ svg {
   font-size: 1rem;
   vertical-align: middle;
 }
-
-.wingdings {
-  font-family: var(--typo-signe);
-}
-
-.wingdings2 {
-  font-family: var(--typo-signe-bis);
-}
-
-.project-line {
-  color: var(--couleur-main-bis);
-}
-
 .project-page {
   color: var(--couleur-main-bis);
   background-color: var(--couleur-fond-bis);
@@ -287,6 +293,10 @@ svg {
   fill: var(--couleur-main-bis);;
 }
 
+.project-line {
+  color: var(--couleur-main-bis);
+}
+
 .project-container {
   padding-bottom: 0.75rem;
   display: grid;
@@ -295,18 +305,23 @@ svg {
 }
 
 .project-text p {
+  position: sticky;
+  top: 0.75rem;
+
   font-family: var(--typo-courant);
   font-weight: normal;
   font-size: 0.75rem;
 }
 
-.after-space {
-  margin-bottom: 0.75rem;
-}
+.project-text h2 {
+  position: fixed;
+  -webkit-backface-visibility: hidden;
+  bottom: 0.75rem;
+  z-index: 5;
 
-.italic-text {
-  font-style: italic;
-  font-weight: light;
+  font-family: var(--typo-titre);
+  font-size: 5rem;
+  line-height: 5rem;
 }
 
 .project-link {
@@ -323,17 +338,6 @@ svg {
   background-color: var(--couleur-main-bis);
 }
 
-.project-text h2 {
-  position: fixed;
-  -webkit-backface-visibility: hidden;
-  bottom: 0.75rem;
-  z-index: 5;
-
-  font-family: var(--typo-titre);
-  font-size: 5rem;
-  line-height: 5rem;
-}
-
 .project-gallery {
   display: flex;
   flex-wrap: wrap;
@@ -343,18 +347,10 @@ svg {
 
 .project-image {
   width: auto;
-  max-width: calc((100% - 2 * 0.75rem) / 3);
+  max-width: calc((100% - 0.75rem) / 2);
   height: auto;
 
   display: block;
-}
-
-.bold-text {
-  font-family: var(--typo-courant);
-  font-weight: bold;
-}
-
-.link {
 }
 
 .link:hover {
@@ -363,7 +359,7 @@ svg {
 }
 
 #marquee {
-  width: calc(100vw - 1.5rem);
+  width: calc(100vw - (2 * 0.75rem));
 
   display: flex;
   overflow: hidden;
