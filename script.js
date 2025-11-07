@@ -1,9 +1,9 @@
-const filterButtons = document.querySelectorAll("#filters a")
+const filterButtons = document.querySelectorAll("#project-filters a")
 const filterableCards = document.querySelectorAll("#gallery a")
 
 const filterCards = e => {
-	document.querySelector(".active").classList.remove("active");
-	e.target.classList.add("active");
+	document.querySelector(".active-project-filter").classList.remove("active-project-filter");
+	e.target.classList.add("active-project-filter");
 	
 	filterableCards.forEach(a => {
 		a.classList.add("hidden")

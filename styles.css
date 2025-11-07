@@ -1,3 +1,5 @@
+/* === FONTS === */
+
 @font-face {
     font-family: "Alegreya";
     font-style: normal;
@@ -40,6 +42,8 @@
     src: url(fonts/WINGDNG2.TTF) format("truetype");
 }
 
+/* === VARIABLES === */
+
 :root {
 	--couleur-fond: blue;
 	--couleur-main: #C5CEFF;
@@ -53,6 +57,8 @@
   --typo-signe: "Wingdings";
   --typo-signe-bis: "Wingdings 2";
 }
+
+/* === RESPONSIVE === */
 
 /* Très très très petits écrans */
 @media (max-width: 240px) {
@@ -126,6 +132,8 @@
   }
 }
 
+/* === GENERAL === */
+
 * {
 	margin: 0;
 	padding: 0;
@@ -138,6 +146,10 @@ body {
   overflow-x: hidden;
 
   padding: 0.75rem 0.75rem 0 0.75rem;
+
+  font-family: var(--typo-courant);
+  font-weight: normal;
+  font-size: 0.75rem;
 
  	color: var(--couleur-main);
  	background-color: var(--couleur-fond);
@@ -184,7 +196,8 @@ a {
 }
 
 a:hover {
-  cursor: pointer
+  cursor: pointer;
+  user-select: none;
 }
 
 hr {
@@ -209,8 +222,6 @@ h1, h2 {
   font-size: inherit;  
   line-height: inherit;
   font-synthesis: none;
-
-  user-select: none;
 }
 
 svg {
@@ -218,6 +229,10 @@ svg {
   height: 4rem;
   fill: white;
 }
+
+/* === CLASS === */
+
+/* Text */
 
 .after-space {
   margin-bottom: 0.75rem;
@@ -229,7 +244,6 @@ svg {
 }
 
 .bold-text {
-  font-family: var(--typo-courant);
   font-weight: bold;
 }
 
@@ -241,20 +255,18 @@ svg {
   font-family: var(--typo-signe-bis);
 }
 
-.filter img {
+/* Index */
+
+.image-color-filter img {
   mix-blend-mode: lighten;
   filter: grayscale(100%) contrast(100%);
   opacity: 0.9;
 }
 
-.filter img:hover {
+.image-color-filter img:hover {
   mix-blend-mode: normal;
   filter: none;
   opacity: 1;
-}
-
-.to-project.hidden{
-  display: none;
 }
 
 .image-in-gallery {
@@ -262,18 +274,25 @@ svg {
   height: auto;
 }
 
-.active {
+.to-project.hidden{
+  display: none;
+}
+
+.active-project-filter {
   text-decoration: underline;
   text-decoration-thickness: 0.15rem;
 }
 
-.active::before {
+.active-project-filter::before {
   content:"S ";
 
   font-family: var(--typo-signe-bis);
   font-size: 1rem;
   vertical-align: middle;
 }
+
+/* Project */
+
 .project-page {
   color: var(--couleur-main-bis);
   background-color: var(--couleur-fond-bis);
@@ -307,10 +326,6 @@ svg {
 .project-text p {
   position: sticky;
   top: 0.75rem;
-
-  font-family: var(--typo-courant);
-  font-weight: normal;
-  font-size: 0.75rem;
 }
 
 .project-text h2 {
@@ -353,13 +368,20 @@ svg {
   display: block;
 }
 
-.link:hover {
+/* Infos */
+
+.infos-link:hover {
   text-decoration: underline wavy;
   text-decoration-thickness: 0.025rem;
 }
 
+
+/* === ID === */
+
+/* Index */
+
 #marquee {
-  width: calc(100vw - (2 * 0.75rem));
+  width: calc(100% - (2 * 0.75rem));
 
   display: flex;
   overflow: hidden;
@@ -379,7 +401,6 @@ svg {
   align-items: center;
   flex-shrink: 0;
 
-  font-family: var(--typo-courant);
   font-weight: normal;
   font-size: 1rem;
   line-height: 1.2rem;
@@ -402,13 +423,13 @@ svg {
   gap: 0.75rem;
 }
 
-#gallery{
+#gallery {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0.75rem;
 }
 
-#filters {
+#project-filters {
   position: fixed;
   -webkit-backface-visibility: hidden;
   bottom: 0.75rem;
@@ -424,21 +445,19 @@ svg {
   user-select: none;
 }
 
-#filters a:hover {
+#project-filters a:hover {
   font-family: var(--typo-titre);
   text-decoration: underline;
   text-decoration-thickness: 0.15rem;
 }
+
+/* Infos */
 
 #infos-container {
   padding-bottom: 0.75rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 0.75rem;
-
-  font-family: var(--typo-courant);
-  font-weight: normal;
-  font-size: 0.75rem;
 }
 
 #infos-container h2 {
@@ -447,4 +466,24 @@ svg {
   font-family: var(--typo-titre);
   font-size: 2rem;
   line-height: 1.6rem;
+}
+
+#outside-links {
+  width: 100%;
+
+  position: fixed;
+  bottom: 0.75rem;
+  -webkit-backface-visibility: hidden;
+
+  display: flex;
+  flex-direction: row;
+  gap: 0.75rem;
+}
+
+#footer {
+  position: fixed;
+  bottom: 0.75rem;
+  -webkit-backface-visibility: hidden;
+
+  line-height: 0.75rem;
 }
