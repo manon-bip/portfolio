@@ -478,6 +478,8 @@ svg {
   display: flex;
   flex-direction: row;
   gap: 0.75rem;
+
+  line-height: 0.75rem;
 }
 
 #footer {
