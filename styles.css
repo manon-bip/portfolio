@@ -260,13 +260,15 @@ svg {
 .image-color-filter img {
   mix-blend-mode: lighten;
   filter: grayscale(100%) contrast(100%);
-  opacity: 0.9;
 }
 
 .image-color-filter img:hover {
   mix-blend-mode: normal;
   filter: none;
-  opacity: 1;
+}
+
+.image-invert-filter img {
+  filter: grayscale(100%) contrast(100%) invert(1);
 }
 
 .image-in-gallery {
@@ -360,9 +362,17 @@ svg {
   justify-content: flex-end;
 }
 
-.project-image {
+.project-image-1 {
   width: auto;
   max-width: calc((100% - 0.75rem) / 2);
+  height: auto;
+
+  display: block;
+}
+
+.project-image-2 {
+  width: auto;
+  max-width: 100%;
   height: auto;
 
   display: block;
@@ -488,5 +498,4 @@ svg {
   -webkit-backface-visibility: hidden;
 
   line-height: 0.75rem;
-
 }
