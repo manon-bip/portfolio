@@ -378,6 +378,14 @@ svg {
   display: block;
 }
 
+.project-image-3 {
+  width: auto;
+  max-width: 74%;
+  height: auto;
+
+  display: block;
+}
+
 /* Infos */
 
 .infos-link:hover {
