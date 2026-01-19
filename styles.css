@@ -65,8 +65,6 @@
   --typo-signe-bis: "Wingdings 2";
 }
 
-/* #E1E6FF */
-
 /* === RESPONSIVE === */
 
 /* Très très très petits écrans */
@@ -316,10 +314,6 @@ svg {
   background-color: var(--couleur-fond-bis);
 }
 
-.project-menu {
-  color: var(--couleur-main-bis);
-}
-
 .project-menu a:hover {
   color: var(--couleur-fond-bis);
   border-color: var(--couleur-main-bis);
@@ -405,7 +399,6 @@ svg {
 /* Infos */
 
 .infos-symbol-and-link {
-
 
 }
 
